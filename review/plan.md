@@ -7,5 +7,5 @@
 - 5회차 계획(2021.01.24. 9:00 ~ 12:00) -  리액트 프로젝트 주소록 만들기 실습2
 - 6회차 계획(2021.02.07. 9:00 ~ 12:00) -  Redux 학습 및 실습
 
-인프런: [inflearn](https://www.inflearn.com/course/react-%EA%B0%95%EC%A2%8C-velopert)
+인프런: [inflearn](https://www.inflearn.com/course/react-%EA%B0%95%EC%A2%8C-velopert)   
 백준 온라인 저지: [Backjoon Online Judge](https://www.acmicpc.net/)
