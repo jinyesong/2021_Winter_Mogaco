@@ -8,5 +8,5 @@
 - 6회차 계획(2021.02.07. 9:00 ~ 12:00) -  영화 웹서비스 만들기 실습2
 
 인프런: [inflearn](https://www.inflearn.com/course/react-%EA%B0%95%EC%A2%8C-velopert)   
-백준 온라인 저지: [Backjoon Online Judge](https://www.acmicpc.net/)
+백준 온라인 저지: [Backjoon Online Judge](https://www.acmicpc.net/)  
 노마드 코더: [Nomad Coders](https://nomadcoders.co/)
