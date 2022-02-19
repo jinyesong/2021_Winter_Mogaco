@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <div id="root"></div>
+</body>
+<script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+    const root = document.getElementById("root");
+    function Title(){
+        return <h3 id="title" onMouseEnter={()=> console.log("mouse enter.")}>Hello I am a H3</h3>;
+    }
+    // const h3 = React.createElement("h3", { id:"title", onMouseEnter: ()=> console.log("mouse enter.")}, "Hello I am a span");
+    // //괄호안 첫번째에 들어가는 것은 element이름 이어야 함 tag이름?, 그다음 속성(eventlistener를 넣을 수 있음), 그다음 내용
+    // const btn = React.createElement("button", { onClick: () => console.log("clicked"), }, "Click Me!");
+    const Btn = () => <button onClick={() => console.log("clicked")} style={{color:"red"}}>Click Me!</button>
+    const Container = () => <div><Title /><Btn /></div> 
+    // 컴포넌트의 첫글자는 대문자로 쓰기 -> html element들과 헷갈리지 않기 위함
+    // const container = React.createElement("div", null, [title, btn]);
+    ReactDOM.render(<Container />, root);
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div id="root"></div>
+</body>
+<script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+    const root = document.getElementById("root");
+    let counter = 0;
+    function App(){
+        const [counter, setCounter] = React.useState(0);
+        const onClick = () => {
+            // setCounter(counter + 1);
+            setCounter(current => current + 1);
+            //주석처리 되어있는 위 방법은 counter가 다른 곳에서 변경될 위험이 있으나 밑의 방법은 current가 현재의 state이라는 것을 보장해줌, 더 안전
+            
+
+            // console.log("rerendered");
+            // console.log(counter);
+        }
+        return(
+            <div>
+                <h3>Total Clicks: {counter}</h3>
+                <button onClick={onClick}>Click Me!</button>
+            </div>
+        );
+    }
+    ReactDOM.render(<App />, root);
+    
+</script>
+</html>

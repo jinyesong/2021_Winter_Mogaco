@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <div id="root"></div>
+</body>
+<script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+    const root = document.getElementById("root");
+    function App(){
+        const [minutes, setMinutes] = React.useState();
+        return(
+            <div>
+                <h1>Super Converter</h1>
+                <label htmlFor="minutes">Minutes</label> 
+                {/*for -> htmlFor, class -> className*/}
+                <input value={minutes} id="minutes" type="number" placeholder="Minutes" />
+                <label htmlFor="hours">Hours</label>
+                <input id="hours" type="number" placeholder="Hours" />
+            </div>
+        );
+    }
+    ReactDOM.render(<App />, root);
+</script>
+</html>
