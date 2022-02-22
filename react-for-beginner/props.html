@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <div id="root"></div>
+</body>
+<script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+    const root = document.getElementById("root");
+    function Btn({text, big}){ /* props.text -> {text} props가 오브젝트이므로 변경가능*/
+        return(
+            <button style={{
+                backgroundColor: "tomato",
+                color: "white",
+                padding: "10px 20px",
+                borderRadius: 10,
+                border: 0, 
+                fontSize: big ? 18 : 10,
+            }}>{text}</button>
+        );
+    }
+    function App(){
+        return(
+            <div>
+                <Btn text="Save Changes" big={true} /> {/* Btn({text:"Save Changes"}) 와 같음 */}
+                <Btn text="Continue" big={false} />
+            </div>
+        );
+    }
+    ReactDOM.render(<App />, root);
+</script>
+</html>
