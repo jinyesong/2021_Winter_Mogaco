@@ -8,23 +8,28 @@
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 <script type="text/babel">
     const root = document.getElementById("root");
-    function Btn({text, big}){ /* props.text -> {text} props가 오브젝트이므로 변경가능*/
+    function Btn({text, changeValue}){ /* props.text -> {text} props가 오브젝트이므로 변경가능*/
         return(
-            <button style={{
+            <button onClick={changeValue} style={{
                 backgroundColor: "tomato",
                 color: "white",
                 padding: "10px 20px",
                 borderRadius: 10,
                 border: 0, 
-                fontSize: big ? 18 : 10,
             }}>{text}</button>
         );
     }
+    const MemorizedBtn = React.memo(Btn); /* memo: re-render할때 바뀔필요가 없는 부분은 다시 그리지 않음 */
     function App(){
+        const [value, setValue] = React.useState("SaveChanges");
+        const changeValue = ()=>{
+            setValue("Revert Changes");
+        }
         return(
             <div>
-                <Btn text="Save Changes" big={true} /> {/* Btn({text:"Save Changes"}) 와 같음 */}
-                <Btn text="Continue" big={false} />
+                <MemorizedBtn text={value} changeValue={changeValue} /> 
+                {/* Btn({text:"Save Changes"}) 와 같음 */} {/* 함수도 prop로 전달 가능 */} 
+                <MemorizedBtn text="Continue" />
             </div>
         );
     }
