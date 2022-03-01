@@ -1,9 +1,14 @@
 import Button from "./Button";
 import styles from "./App.module.css";
-import {useState} from "react";
+import {useState, useEffect} from "react";
 
 function App() {
   const [counter, setCount] = useState(0);
+  console.log("계속실행");
+  const runOnlyOnce = ()=>{
+    console.log("한번실행");
+  }
+  useEffect(runOnlyOnce, []);
   const onClick = ()=>{
     setCount(current => current +1);
   }
