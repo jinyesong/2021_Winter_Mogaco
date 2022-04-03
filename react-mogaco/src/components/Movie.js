@@ -18,7 +18,7 @@ Movie.propTypes = {
     id: propTypes.number.isRequired,
     coverImg: propTypes.string.isRequired,
     title: propTypes.string.isRequired,
-    summary: propTypes.string.isRequired,
+    summary: propTypes.string,
     genres: propTypes.arrayOf(propTypes.string).isRequired,
 };
 
